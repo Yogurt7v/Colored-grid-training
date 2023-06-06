@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Colored Grid Trainign</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="options">
+        <div class="options-wrapper">
+          <div class="slider">
+            <label for="width-range">Ширина панели</label>
+            <input type="range" id="width-range" min="1" max="35" />
+            <span id="windth-value">00</span>
+          </div>
+          <div class="slider">
+            <label for="hight-range">Высота панели</label>
+            <input type="range" id="hight-range" min="1" max="35" />
+            <span id="hight-value">00</span>
+          </div>
+        </div>
+        <div class="options-wrapper">
+          <button id="create-grid">Создать панель</button>
+          <button id="delete-grid">Удалить панель</button>
+          <input type="color" name="" id="new-color" />
+          <button id="paint-btn">Рисовать</button>
+          <button id="delete-btn">Стереть цвет</button>
+        </div>
+      </div>
+      <div class="container"></div>
+    </div>
+
+    <script src="index.js"></script>
+  </body>
+</html>
