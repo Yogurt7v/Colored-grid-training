@@ -10,24 +10,24 @@
   <body>
     <div class="wrapper">
       <div class="options">
-        <div class="options-wrapper">
+        <div class="opt-wrapper">
           <div class="slider">
             <label for="width-range">Ширина панели</label>
             <input type="range" id="width-range" min="1" max="35" />
-            <span id="windth-value">00</span>
+            <span id="width-value">00</span>
           </div>
           <div class="slider">
-            <label for="hight-range">Высота панели</label>
-            <input type="range" id="hight-range" min="1" max="35" />
-            <span id="hight-value">00</span>
+            <label for="height-range">Высота панели</label>
+            <input type="range" id="height-range" min="1" max="35" />
+            <span id="height-value">00</span>
           </div>
         </div>
-        <div class="options-wrapper">
-          <button id="create-grid">Создать панель</button>
-          <button id="delete-grid">Удалить панель</button>
-          <input type="color" name="" id="new-color" />
+        <div class="opt-wrapper">
+          <button id="submit-grid">Создать панель</button>
+          <button id="clear-grid">Удалить панель</button>
+          <input type="color" name="" id="color-input" />
+          <button id="erase-btn">Стереть цвет</button>
           <button id="paint-btn">Рисовать</button>
-          <button id="delete-btn">Стереть цвет</button>
         </div>
       </div>
       <div class="container"></div>

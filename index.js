@@ -1,22 +1,22 @@
 let container = document.querySelector(".container");
-let gridButton = document.getElementById(".create-grid");
-let clearGridButton = document.getElementById(".delete-grid");
+let gridButton = document.getElementById(".submit-grid");
+let clearGridButton = document.getElementById(".clear-grid");
 let gridWidth = document.getElementById(".width-range");
-let gridHeight = document.getElementById(".hight-range");
+let gridHeight = document.getElementById(".height-range");
 let colorButton = document.getElementById(".color-input"); // может не работать
-let eraseButton = document.getElementById(".delete-btn");
+let eraseButton = document.getElementById(".erase-btn");
 let paintButton = document.getElementById(".paint-btn");
-let widthValue = document.getElementById(".windth-value");
-let heightValue = document.getElementById(".hight-value");
+let widthValue = document.getElementById(".width-value");
+let heightValue = document.getElementById(".height-value");
 
 let events = {
-  MouseEvent: {
+  mouse: {
     down: "mousedown",
     move: "mousemove",
     up: "mouseup",
   },
 
-  Touch: {
+  touch: {
     down: "touchstart",
     mobe: "touchmove",
     up: "touchend",
@@ -53,7 +53,7 @@ gridButton.addEventListener("click", () => {
       count += 2;
       let col = document.createElement("div");
       col.classList.add("gridCol");
-      col.setAttribute("id", "grid.Col${count}");
+      col.setAttribute("id", "gridCol${count}");
       col.addEventListener(events[deviceType].down, () => {
         draw = true;
         if (erase) {
@@ -70,7 +70,7 @@ gridButton.addEventListener("click", () => {
         ).id;
         checker(elementId);
       });
-      col.addEventListener(eventsp[deviceType].up, () => {
+      col.addEventListener(events[deviceType].up, () => {
         draw = false;
       });
 
@@ -117,6 +117,6 @@ gridHeight.addEventListener("input", () => {
 });
 
 window.onload = () => {
-  gridHeight.value = 0;
-  gridWidth.value = 0;
+  gridHeight.value = 10;
+  gridWidth.value = 10;
 };
